@@ -14,7 +14,7 @@
   --highlight: #93ad9c;
   --border: rgba(122, 93, 82, 0.14);
   --border-strong: rgba(122, 93, 82, 0.22);
-  --header-offset: 7.75rem;
+  --header-offset: 6.5rem;
 }
 
 @theme inline {
@@ -74,7 +74,7 @@ video {
 }
 
 .section-anchor {
-  scroll-margin-top: calc(var(--header-offset) + 0.25rem);
+  scroll-margin-top: calc(var(--header-offset) + 1rem);
 }
 
 .section-kicker {
@@ -174,7 +174,7 @@ video {
 
 @media (min-width: 768px) {
   :root {
-    --header-offset: 9.25rem;
+    --header-offset: 7.75rem;
   }
 
   .section-base {

@@ -22,15 +22,15 @@ const dmSerifDisplay = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Creamy Catering – Mobiles Kaffee & Matcha Catering Saarland",
+  title: "Creamy Catering – Mobiles Specialty Coffee & Ceremonial Matcha Catering Saarland",
   description:
-    "Premium mobiles Kaffee-, Matcha- und Bagel-Catering für Events im Saarland. Hochzeiten, Business-Events, Messen und private Feiern.",
+    "Premium mobiles Specialty-Coffee-, Ceremonial-Matcha- und Bagel-Catering für Events im Saarland. Hochzeiten, Business-Events, Messen und private Feiern.",
   metadataBase: new URL("https://www.creamy-catering.de"),
   openGraph: {
     type: "website",
-    title: "Creamy Catering – Mobiles Kaffee & Matcha Catering Saarland",
+    title: "Creamy Catering – Mobiles Specialty Coffee & Ceremonial Matcha Catering Saarland",
     description:
-      "Premium mobiles Kaffee-, Matcha- und Bagel-Catering für Events im Saarland.",
+      "Premium mobiles Specialty-Coffee-, Ceremonial-Matcha- und Bagel-Catering für Events im Saarland.",
     url: "/",
     siteName: "Creamy Catering",
     images: [
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Creamy Catering – Mobiles Kaffee & Matcha Catering Saarland",
+    title: "Creamy Catering – Mobiles Specialty Coffee & Ceremonial Matcha Catering Saarland",
     description:
-      "Premium mobiles Kaffee-, Matcha- und Bagel-Catering für Events im Saarland.",
+      "Premium mobiles Specialty-Coffee-, Ceremonial-Matcha- und Bagel-Catering für Events im Saarland.",
     images: ["/media/images/IMG_2324.JPG"],
   },
   icons: {

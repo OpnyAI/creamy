@@ -44,99 +44,103 @@ export const siteContent = {
 export const sections = {
   services: [
     {
-      title: "Mobile Kaffee- & Matcha-Bar",
-      text: "Kaffee, Matcha und Service direkt an eurer Location, abgestimmt auf Anlass und Gäste.",
+      title: "Mobile Specialty-Coffee- & Ceremonial-Matcha-Bar",
+      text: "Das Herzstück unseres Angebots: live zubereitete Specialty-Coffee- und Ceremonial-Matcha-Spezialitäten für Events jeder Größe.",
       badge: "Bar-Konzept",
     },
     {
       title: "Heiße & kalte Drinks",
-      text: "Von Espresso bis Iced Matcha, passend zur Jahreszeit und zum Ablauf eures Events.",
+      text: "Von Espresso und Cappuccino bis Iced Coffee und Iced Matcha, flexibel für Indoor-Events, Sommerveranstaltungen und Pop-ups.",
       badge: "Drinks",
     },
     {
       title: "Bagel-Spezialitäten",
-      text: "Frisch belegte Bagels als herzhafte Ergänzung zur Bar.",
+      text: "Frisch vor jedem Event zubereitet, regional bezogen und als hochwertige Ergänzung zu Specialty Coffee und Ceremonial Matcha gedacht.",
       badge: "Food",
     },
     {
-      title: "Granola & Sweet Details",
-      text: "Leichte Extras für Brunches, Pop-ups und Tagesveranstaltungen.",
+      title: "Granola Bowls",
+      text: "Leichte, frische Optionen mit Granola, griechischem Joghurt, Quark, Heidelbeerkompott und saisonalen Früchten.",
       badge: "Add-ons",
     },
     {
-      title: "Flower Boxes optional",
-      text: "Auf Wunsch mit floralen Details, die das Setup noch stimmiger machen.",
+      title: "Flower Boxen",
+      text: "Dekorative Add-ons für eine stilvolle Präsentation, als elegante Geste auf dem Event oder als Goodie-Bag-Option.",
       badge: "Styling",
     },
     {
       title: "Persönliche Event-Beratung",
-      text: "Direkte Abstimmung, passende Mengen und eine Lösung, die wirklich zu eurem Event passt.",
+      text: "Persönliche Abstimmung und ein Konzept, das passgenau zu Veranstaltung, Ablauf, Location und Gästen entwickelt wird.",
       badge: "Service",
     },
   ],
   useCases: [
     {
-      title: "Business Events",
-      text: "Für Firmenevents, Kundentermine, Launches oder interne Feiern mit stilvollem Rahmen.",
+      title: "Business-Events",
+      text: "Professionell begleitet mit Specialty Coffee, Ceremonial Matcha und Food-Angeboten, die hochwertig und strukturiert in den Ablauf passen.",
+    },
+    {
+      title: "Firmenveranstaltungen",
+      text: "Für Teamtage, Kundenevents oder interne Formate, bei denen Qualität, Verlässlichkeit und ein gepflegter Auftritt gefragt sind.",
     },
     {
       title: "Hochzeiten",
-      text: "Eine schöne Ergänzung für Empfang, Nachmittag oder den entspannten Teil eurer Feier.",
+      text: "Als stilvolle Ergänzung für Empfang, Nachmittag oder spätere Genussmomente mit persönlicher Atmosphäre.",
     },
     {
-      title: "Pop-ups & Marken-Events",
-      text: "Ideal für Pop-ups, Store Events und Aktionen, bei denen Atmosphäre wichtig ist.",
+      title: "Messen",
+      text: "Für Messestände und Formate mit vielen Gästen, bei denen frisch zubereitete Drinks und ein ruhiger Ablauf überzeugen sollen.",
     },
     {
-      title: "Messen & Showrooms",
-      text: "Für Messestände und Showrooms, wenn ihr Gäste hochwertig und unkompliziert bewirten möchtet.",
+      title: "Pop-up-Events",
+      text: "Flexibel einsetzbar für moderne Konzepte, wechselnde Orte und Markenauftritte mit ästhetischer Präsentation.",
+    },
+    {
+      title: "Sportveranstaltungen",
+      text: "Mit leichten Food-Optionen, kalten Drinks und einer mobilen Bar, die sich gut in dynamische Eventumgebungen integrieren lässt.",
     },
     {
       title: "Private Feiern",
-      text: "Für Geburtstage, Brunches und andere Anlässe im kleinen oder größeren Kreis.",
-    },
-    {
-      title: "Sport- & Community Events",
-      text: "Eine mobile Lösung für Events mit vielen Gästen und lockerer Atmosphäre.",
+      text: "Für persönliche Anlässe mit hochwertigen Genussmomenten, die Gästen im Gedächtnis bleiben.",
     },
   ],
   qualityFeatures: [
     {
-      title: "Bio-Kaffeebohnen",
-      text: "Sorgfältig ausgewählt für guten Geschmack und gleichbleibende Qualität.",
+      title: "Biozertifizierte Specialty-Coffee-Bohnen",
+      text: "Von einer ausgewählten Rösterei bezogen, regelmäßig frisch geröstet und für ein aromatisches, ausgewogenes Geschmackserlebnis ausgewählt.",
     },
     {
-      title: "Ceremonial Matcha",
-      text: "Aus erster Ernte in Japan, fein im Geschmack und ideal für Latte und Iced Matcha.",
+      title: "Premium Ceremonial Matcha",
+      text: "Erste Ernte aus Japan mit leuchtend grüner Farbe, feinem Geschmack und hoher Qualität für heiße und kalte Spezialitäten.",
     },
     {
-      title: "Frische Zubereitung vor Ort",
-      text: "Jedes Getränk wird frisch vor Ort zubereitet.",
+      title: "Live-Zubereitung vor Ort",
+      text: "Unsere Baristas bereiten alle Specialty-Coffee-Spezialitäten und Matcha-Drinks frisch direkt auf dem Event zu.",
     },
     {
-      title: "Stilvolle Präsentation",
-      text: "Die Bar ist ruhig, schön und passend zum Anlass gestaltet.",
+      title: "Ästhetische Präsentation",
+      text: "Von der Bar bis zu den Details ist alles so gestaltet, dass Qualität, Frische und ein stimmiges Gesamtbild sichtbar werden.",
     },
     {
-      title: "Persönliche Betreuung",
-      text: "Von der ersten Anfrage bis zum Event persönlich, direkt und zuverlässig.",
+      title: "Zuverlässige Zusammenarbeit",
+      text: "Persönliche Beratung, sorgfältige Planung und ein professioneller Ablauf von der Anfrage bis zur Umsetzung.",
     },
   ],
   menuHighlights: [
     {
-      title: "Matcha",
-      text: "Von klassischem Matcha Latte bis zu gekühlten Varianten für warme Tage.",
+      title: "Premium Ceremonial Matcha",
+      text: "Von Matcha Latte bis Iced Matcha, mit feinem Geschmack, frischer Farbe und flexibel für jede Jahreszeit.",
       image: "/media/images/IMG_2329.JPG",
     },
     {
-      title: "Kaffee",
-      text: "Espresso, Cappuccino, Flat White oder Iced Coffee frisch an der Bar zubereitet.",
+      title: "Specialty Coffee",
+      text: "Espresso, Cappuccino und weitere Kaffeevariationen werden live vor Ort frisch gebrüht und serviert.",
       image: "/media/images/IMG_2337.JPG",
     },
     {
-      title: "Bagels",
-      text: "Frisch belegt, herzhaft und eine stimmige Ergänzung zu Kaffee und Matcha.",
-      image: "/media/images/IMG_2325.JPG",
+      title: "Granola Bowls & Extras",
+      text: "Leichte Bowls, kleine Snacks und passende Kleinigkeiten ergänzen das Konzept für Empfänge, Frühstücks- und Sportveranstaltungen.",
+      image: "/media/images/IMG_2336.JPG",
     },
   ],
   socialMoments: [
