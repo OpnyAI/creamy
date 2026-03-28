@@ -15,20 +15,32 @@ const manrope = localFont({
 });
 
 const dmSerifDisplay = localFont({
-  src: [{ path: "./fonts/dm-serif-display-regular.ttf", weight: "400", style: "normal" }],
+  src: [
+    {
+      path: "./fonts/dm-serif-display-regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
   variable: "--font-dm-serif-display",
   display: "swap",
   fallback: ["Times New Roman", "serif"],
 });
 
 export const metadata: Metadata = {
-  title: "Creamy Catering – Mobiles Specialty Coffee & Ceremonial Matcha Catering Saarland",
+  title: {
+    default:
+      "Creamy Catering – Mobiles Specialty Coffee & Ceremonial Matcha Catering Saarland",
+    template: "%s | Creamy Catering",
+  },
   description:
     "Premium mobiles Specialty-Coffee-, Ceremonial-Matcha- und Bagel-Catering für Events im Saarland. Hochzeiten, Business-Events, Messen und private Feiern.",
   metadataBase: new URL("https://www.creamy-catering.de"),
+  manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
-    title: "Creamy Catering – Mobiles Specialty Coffee & Ceremonial Matcha Catering Saarland",
+    title:
+      "Creamy Catering – Mobiles Specialty Coffee & Ceremonial Matcha Catering Saarland",
     description:
       "Premium mobiles Specialty-Coffee-, Ceremonial-Matcha- und Bagel-Catering für Events im Saarland.",
     url: "/",
@@ -44,13 +56,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Creamy Catering – Mobiles Specialty Coffee & Ceremonial Matcha Catering Saarland",
+    title:
+      "Creamy Catering – Mobiles Specialty Coffee & Ceremonial Matcha Catering Saarland",
     description:
       "Premium mobiles Specialty-Coffee-, Ceremonial-Matcha- und Bagel-Catering für Events im Saarland.",
     images: ["/media/images/IMG_2324.JPG"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
