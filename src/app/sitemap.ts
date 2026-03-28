@@ -10,17 +10,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
-    {
-      url: "https://www.creamy-catering.de/impressum",
-      lastModified,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: "https://www.creamy-catering.de/datenschutz",
-      lastModified,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
   ];
 }

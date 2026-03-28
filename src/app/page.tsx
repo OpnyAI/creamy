@@ -63,6 +63,64 @@ const bagelVariants = [
   "Veganer Bagel mit Kichererbsen-Hummus, Avocado, Kopfsalat und Rucola",
 ];
 
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Creamy Catering",
+  url: siteContent.brand.domain,
+  image: [`${siteContent.brand.domain}${siteContent.images.bagelsBoard}`],
+  telephone: "+49 1522 3971744",
+  email: "Infocreamy@web.de",
+  description:
+    "Creamy Catering bietet hochwertiges Coffee Catering, Matcha Catering und eine mobile Kaffeebar für Hochzeiten, Business-Events, Firmenveranstaltungen, Messen und private Feiern im Saarland.",
+  founder: {
+    "@type": "Person",
+    name: "Yasemin Tekin",
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Theodor-Mommsen-Weg 14",
+    postalCode: "66793",
+    addressLocality: "Saarwellingen",
+    addressCountry: "DE",
+  },
+  areaServed: ["Saarland", "Saarlouis", "Saarbrücken und Umgebung"],
+  serviceType: [
+    "Coffee Catering Saarland",
+    "Matcha Catering Saarland",
+    "Mobile Kaffeebar mieten Saarland",
+    "Specialty Coffee Catering Saarland",
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Catering-Leistungen",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Coffee Catering für Events im Saarland",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Matcha Catering für Hochzeiten und Business-Events im Saarland",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Mobile Kaffeebar für Saarlouis, Saarbrücken und Umgebung",
+        },
+      },
+    ],
+  },
+  sameAs: [siteContent.instagramLink, siteContent.tiktokLink],
+};
+
 export default function Home() {
   const { images, brand } = siteContent;
 
@@ -73,6 +131,10 @@ export default function Home() {
 
   return (
     <div id="top" className="min-h-screen bg-[var(--background)] text-[var(--fg)]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
       <header className="sticky top-0 z-50 px-3 pt-2 md:px-6 md:pt-3">
         <div className="mx-auto max-w-7xl rounded-[1.15rem] border border-white/48 bg-[rgba(251,245,241,0.58)] shadow-[0_10px_26px_rgba(80,57,48,0.05)] backdrop-blur-lg md:rounded-[1.45rem]">
           <div className="flex items-center justify-between gap-3 px-3 py-2 md:px-5 md:py-3">
@@ -85,7 +147,7 @@ export default function Home() {
               <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[0.8rem] border border-white/68 bg-white/84 p-1.5 shadow-[0_6px_16px_rgba(80,57,48,0.06)] md:h-11 md:w-11 md:rounded-[0.95rem]">
                 <Image
                   src={siteContent.logo}
-                  alt="Creamy Catering Logo"
+                  alt="Logo von Creamy Catering"
                   width={56}
                   height={56}
                   className="h-auto max-h-full w-auto max-w-full object-contain"
@@ -94,7 +156,7 @@ export default function Home() {
               </div>
               <div className="min-w-0">
                 <p className="text-[0.54rem] uppercase tracking-[0.14em] text-[var(--accent-strong)] md:text-[0.62rem] md:tracking-[0.2em]">
-                  Ceremonial Matcha & Specialty Coffee Bar
+                  Coffee Catering & Matcha Catering im Saarland
                 </p>
                 <p className="truncate text-[0.94rem] font-semibold tracking-[0.01em] text-[var(--fg)] md:text-[1.06rem]">
                   Creamy Catering
@@ -105,7 +167,10 @@ export default function Home() {
               </div>
             </Link>
 
-            <nav className="hidden items-center gap-7 text-sm text-[var(--muted)] lg:flex">
+            <nav
+              aria-label="Abschnittsnavigation"
+              className="hidden items-center gap-7 text-sm text-[var(--muted)] lg:flex"
+            >
               {navItems.map((item) => (
                 <a
                   key={item.href}
@@ -166,7 +231,10 @@ export default function Home() {
       </header>
 
       <main className="relative overflow-hidden pt-2 md:pt-3">
-        <section className="relative min-h-[35rem] overflow-hidden pt-8 md:min-h-[41rem] md:pt-9 lg:min-h-[45rem] lg:pt-12">
+        <section
+          aria-labelledby="hero-title"
+          className="relative min-h-[35rem] overflow-hidden pt-8 md:min-h-[41rem] md:pt-9 lg:min-h-[45rem] lg:pt-12"
+        >
           <video
             src={siteContent.heroVideo}
             autoPlay
@@ -182,14 +250,18 @@ export default function Home() {
           <div className="relative mx-auto flex min-h-[35rem] max-w-7xl flex-col justify-end px-4 pb-7 pt-12 md:min-h-[41rem] md:px-8 md:pb-10 md:pt-[3.75rem] lg:min-h-[45rem] lg:pb-12 lg:pt-[4.5rem]">
             <div className="max-w-[36rem] rounded-[1.35rem] border border-white/10 bg-[rgba(22,16,13,0.08)] px-4 py-4 text-white shadow-[0_14px_28px_rgba(20,14,12,0.06)] backdrop-blur-[2px] md:rounded-[1.9rem] md:px-7 md:py-7">
               <p className="max-w-lg text-[0.6rem] uppercase tracking-[0.18em] text-white/74 md:text-[0.7rem] md:tracking-[0.24em]">
-                Mobiles Specialty-Coffee-, Ceremonial-Matcha- & Bagel-Catering für Events
+                Mobile Kaffeebar, Specialty Coffee Catering und Matcha Catering im Saarland
               </p>
-              <h1 className="mt-3 max-w-[11ch] font-serif text-[2.1rem] leading-[0.96] tracking-[-0.03em] text-white md:mt-4 md:text-[4rem] lg:text-[4.8rem]">
-                Specialty Coffee und Ceremonial Matcha für stilvolle Events.
+              <h1
+                id="hero-title"
+                className="mt-3 max-w-[12ch] font-serif text-[2.1rem] leading-[0.96] tracking-[-0.03em] text-white md:mt-4 md:text-[4rem] lg:text-[4.8rem]"
+              >
+                Coffee Catering und Matcha Catering für stilvolle Events im Saarland.
               </h1>
               <p className="mt-3.5 max-w-[31rem] text-[0.92rem] leading-relaxed text-white/80 md:mt-4 md:text-[1.04rem] md:leading-[1.8]">
-                Mobile Bar, hochwertige Produkte und eine ästhetische Präsentation für
-                Business-Events, Hochzeiten, Pop-up-Events, Messen und private Feiern.
+                Creamy Catering bringt Specialty Coffee, Ceremonial Matcha und eine mobile
+                Kaffeebar zu Hochzeiten, Business-Events, Firmenveranstaltungen, Messen und
+                privaten Feiern im Saarland, in Saarlouis und in Saarbrücken.
               </p>
 
               <div className="mt-5 hidden flex-col gap-2.5 sm:flex-row sm:gap-2.5 md:flex">
@@ -209,7 +281,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-base pt-7 pb-10 md:pt-9 md:pb-14">
+        <section
+          aria-labelledby="about-title"
+          className="section-base pt-7 pb-10 md:pt-9 md:pb-14"
+        >
           <div
             id="about"
             className="section-anchor mx-auto grid max-w-7xl gap-7 border-t border-[var(--border)] px-4 pt-7 md:gap-8 md:px-8 md:pt-9 lg:grid-cols-[1.04fr_0.96fr] lg:items-start"
@@ -218,7 +293,7 @@ export default function Home() {
               <div className="relative min-h-[23rem] overflow-hidden rounded-[2rem] border border-[var(--border)] bg-white shadow-[0_20px_50px_rgba(79,57,48,0.07)] md:min-h-[29rem] lg:min-h-[38rem]">
                 <Image
                   src={images.founderPortrait}
-                  alt="Yasemin Tekin von Creamy Catering"
+                  alt="Yasemin Tekin von Creamy Catering in Saarwellingen"
                   fill
                   className="object-cover"
                   loading="lazy"
@@ -228,7 +303,7 @@ export default function Home() {
               <div className="relative hidden min-h-[12rem] overflow-hidden rounded-[1.8rem] border border-[var(--border)] bg-white shadow-[0_14px_34px_rgba(79,57,48,0.05)] lg:block lg:min-h-[15rem]">
                 <Image
                   src={images.founderWorking}
-                  alt="Yasemin Tekin bei der Zubereitung von Specialty Coffee und Ceremonial Matcha"
+                  alt="Yasemin Tekin an der mobilen Kaffeebar von Creamy Catering"
                   fill
                   className="object-cover"
                   loading="lazy"
@@ -239,8 +314,8 @@ export default function Home() {
 
             <div className="order-2">
               <p className="section-kicker">Über mich</p>
-              <h2 className="section-title mt-4 max-w-[13ch]">
-                Ich bin Yasemin und begleite Events mit Herz, Qualität und Stil.
+              <h2 id="about-title" className="section-title mt-4 max-w-[15ch]">
+                Ich bin Yasemin und begleite Events im Saarland mit Specialty Coffee, Ceremonial Matcha und Stil.
               </h2>
               <div className="mt-5 max-w-[38rem] space-y-3.5">
                 {founderStory.slice(0, 3).map((paragraph) => (
@@ -270,18 +345,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-base py-[3.5rem] md:py-[5.1rem]">
+        <section
+          aria-labelledby="services-title"
+          className="section-base py-[3.5rem] md:py-[5.1rem]"
+        >
           <div id="leistungen" className="section-anchor mx-auto max-w-7xl px-4 md:px-8">
             <div className="grid gap-6 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
               <div>
                 <p className="section-kicker">Über Creamy Catering</p>
-                <h2 className="section-title mt-4 max-w-[14ch]">
-                  Hochwertige Produkte, professionelle Zubereitung und herzliche Zusammenarbeit.
+                <h2 id="services-title" className="section-title mt-4 max-w-[15ch]">
+                  Mobile Kaffeebar, Matcha Catering und hochwertige Event-Begleitung im Saarland.
                 </h2>
                 <p className="section-copy mt-5 max-w-[33rem] leading-relaxed">
                   Bei Creamy Catering verbinden wir hochwertige Produkte, professionelle
-                  Zubereitung und eine herzliche Zusammenarbeit. Unser Ziel ist es, Events
-                  kulinarisch zu begleiten und ein Erlebnis für Gäste zu schaffen.
+                  Zubereitung und eine herzliche Zusammenarbeit. Unser Ziel ist es, Coffee
+                  Catering und Matcha Catering für Events im Saarland ästhetisch und zuverlässig
+                  umzusetzen.
                 </p>
                 <p className="section-copy mt-4 max-w-[33rem] leading-relaxed">
                   Für Eventplaner bedeutet das eine zuverlässige Zusammenarbeit mit einem
@@ -291,7 +370,7 @@ export default function Home() {
                 <div className="relative mt-6 min-h-[13rem] overflow-hidden rounded-[1.7rem] border border-[var(--border)] bg-white shadow-[0_14px_34px_rgba(79,57,48,0.05)] md:min-h-[15rem]">
                   <Image
                     src={images.brandTinsWide}
-                    alt="Branding- und Produktdetail von Creamy Catering"
+                    alt="Specialty Coffee und Ceremonial Matcha von Creamy Catering"
                     fill
                     className="object-cover"
                     loading="lazy"
@@ -326,13 +405,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-base bg-[var(--surface)] py-[3.4rem] md:py-[4.8rem]">
+        <section
+          aria-labelledby="events-title"
+          className="section-base bg-[var(--surface)] py-[3.4rem] md:py-[4.8rem]"
+        >
           <div id="events" className="section-anchor mx-auto max-w-7xl px-4 md:px-8">
             <div className="grid gap-6 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
               <div>
                 <p className="section-kicker">Einsatzbereiche</p>
-                <h2 className="section-title mt-4 max-w-lg">
-                  Passend für Feiern, Firmenevents und besondere Anlässe.
+                <h2 id="events-title" className="section-title mt-4 max-w-lg">
+                  Coffee Catering für Hochzeiten, Business-Events und besondere Anlässe im Saarland.
                 </h2>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {eventTags.map((tag) => (
@@ -347,7 +429,7 @@ export default function Home() {
                 <div className="relative mt-6 min-h-[13rem] overflow-hidden rounded-[1.75rem] border border-[var(--border)] bg-white shadow-[0_14px_34px_rgba(79,57,48,0.05)] md:min-h-[15rem]">
                   <Image
                     src={images.founderWorking}
-                    alt="Mobile Bar von Creamy Catering auf einem Event"
+                    alt="Mobile Kaffeebar von Creamy Catering bei einem Event im Saarland"
                     fill
                     className="object-cover"
                     loading="lazy"
@@ -382,12 +464,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-base py-[3.4rem] md:py-[4.9rem]">
+        <section
+          aria-labelledby="quality-title"
+          className="section-base py-[3.4rem] md:py-[4.9rem]"
+        >
           <div className="mx-auto grid max-w-7xl gap-6 border-t border-[var(--border)] px-4 pt-7 md:gap-7 md:px-8 md:pt-9 lg:grid-cols-[0.96fr_1.04fr] lg:items-start">
             <div>
               <p className="section-kicker">Qualitätsversprechen</p>
-              <h2 className="section-title mt-4 max-w-[14ch]">
-                Premium Produkte, frische Zubereitung und ein professioneller Ablauf.
+              <h2 id="quality-title" className="section-title mt-4 max-w-[15ch]">
+                Specialty Coffee Catering, Ceremonial Matcha und ein professioneller Ablauf vor Ort.
               </h2>
               <div className="mt-5 max-w-[34rem] space-y-4">
                 <p className="section-copy max-w-[31rem] leading-relaxed">
@@ -404,7 +489,7 @@ export default function Home() {
               <div className="relative mt-6 min-h-[14rem] overflow-hidden rounded-[1.75rem] border border-[var(--border)] bg-white shadow-[0_14px_34px_rgba(79,57,48,0.05)] sm:hidden">
                 <Image
                   src={images.barWide}
-                  alt="Bar-Setup von Creamy Catering mit Specialty Coffee und Ceremonial Matcha"
+                  alt="Mobile Kaffeebar mit Specialty Coffee und Ceremonial Matcha von Creamy Catering"
                   fill
                   className="object-cover"
                   loading="lazy"
@@ -434,7 +519,7 @@ export default function Home() {
               <div className="relative min-h-[20rem] overflow-hidden rounded-[2rem] border border-[var(--border)] bg-white shadow-[0_20px_50px_rgba(79,57,48,0.07)] md:min-h-[23rem] lg:min-h-[26rem]">
                 <Image
                   src={images.barWide}
-                  alt="Creamy Catering Bar-Setup"
+                  alt="Mobile Kaffeebar von Creamy Catering für Events im Saarland"
                   fill
                   className="object-cover"
                   loading="lazy"
@@ -475,13 +560,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-base bg-[var(--surface)] py-[3.6rem] md:py-[5rem]">
+        <section
+          aria-labelledby="food-title"
+          className="section-base bg-[var(--surface)] py-[3.6rem] md:py-[5rem]"
+        >
           <div className="mx-auto max-w-7xl px-4 md:px-8">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div>
                 <p className="section-kicker">Food & Drinks</p>
-                <h2 className="section-title mt-4 max-w-[14ch]">
-                  Drinks, Bagels und moderne Food-Ideen aus einem stimmigen Konzept.
+                <h2 id="food-title" className="section-title mt-4 max-w-[16ch]">
+                  Specialty Coffee, Ceremonial Matcha und moderne Food-Ideen aus einem stimmigen Catering-Konzept.
                 </h2>
               </div>
               <p className="section-copy max-w-[31rem] leading-relaxed">
@@ -496,7 +584,7 @@ export default function Home() {
                   <div className="relative aspect-[4/3] overflow-hidden bg-[var(--card-soft)] lg:aspect-[3/2]">
                     <Image
                       src={images.bagelsBoard}
-                      alt="Bagel-Auswahl von Creamy Catering"
+                      alt="Bagel-Auswahl als Ergänzung zum Coffee Catering von Creamy Catering"
                       fill
                       className="object-cover object-center"
                       loading="lazy"
@@ -529,7 +617,7 @@ export default function Home() {
                     <div className="relative aspect-[16/10] overflow-hidden bg-[var(--card-soft)]">
                       <Image
                         src={images.matchaLineupWide}
-                        alt="Premium Ceremonial Matcha und Specialty Coffee von Creamy Catering"
+                        alt="Ceremonial Matcha und Specialty Coffee für Events im Saarland"
                         fill
                         className="object-cover object-center"
                         loading="lazy"
@@ -551,7 +639,7 @@ export default function Home() {
                     <div className="relative aspect-[16/10] overflow-hidden bg-[var(--card-soft)]">
                       <Image
                         src={images.espressoWide}
-                        alt="Specialty Coffee an der Creamy Catering Bar"
+                        alt="Specialty Coffee an der mobilen Kaffeebar von Creamy Catering"
                         fill
                         className="object-cover object-[center_55%]"
                         loading="lazy"
@@ -604,12 +692,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-base py-[3.5rem] md:py-[5rem]">
+        <section
+          aria-labelledby="gallery-title"
+          className="section-base py-[3.5rem] md:py-[5rem]"
+        >
           <div id="galerie" className="section-anchor mx-auto max-w-7xl px-4 md:px-8">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div>
                 <p className="section-kicker">Galerie</p>
-                <h2 className="section-title mt-4 max-w-2xl">
+                <h2 id="gallery-title" className="section-title mt-4 max-w-2xl">
                   Ein paar Eindrücke von Creamy Catering.
                 </h2>
               </div>
@@ -622,7 +713,7 @@ export default function Home() {
               <div className="relative min-h-[20rem] overflow-hidden rounded-[1.9rem] border border-[var(--border)] md:col-span-5 md:row-span-2">
                 <Image
                   src={images.founderWorking}
-                  alt="Yasemin Tekin am Creamy Catering Setup"
+                  alt="Yasemin Tekin am Setup der mobilen Kaffeebar von Creamy Catering"
                   fill
                   className="object-cover"
                   loading="lazy"
@@ -632,7 +723,7 @@ export default function Home() {
               <div className="relative min-h-[14rem] overflow-hidden rounded-[1.9rem] border border-[var(--border)] md:col-span-4">
                 <Image
                   src={images.matchaLineupWide}
-                  alt="Ceremonial Matcha Drinks von Creamy Catering"
+                  alt="Ceremonial Matcha Drinks von Creamy Catering im Saarland"
                   fill
                   className="object-cover"
                   loading="lazy"
@@ -673,12 +764,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-base bg-[var(--surface)] py-[3.5rem] md:py-[5rem]">
+        <section
+          aria-labelledby="social-title"
+          className="section-base bg-[var(--surface)] py-[3.5rem] md:py-[5rem]"
+        >
           <div className="mx-auto max-w-7xl px-4 md:px-8">
             <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
               <div>
                 <p className="section-kicker">Social Media</p>
-                <h2 className="section-title mt-4 max-w-lg">
+                <h2 id="social-title" className="section-title mt-4 max-w-lg">
                   Mehr Eindrücke von Creamy auf Instagram und TikTok.
                 </h2>
                 <p className="section-copy mt-5 max-w-md leading-relaxed">
@@ -753,16 +847,18 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-base py-[3.6rem] md:py-[5rem]">
+        <section
+          aria-labelledby="contact-title"
+          className="section-base py-[3.6rem] md:py-[5rem]"
+        >
           <div id="kontakt" className="section-anchor mx-auto max-w-7xl px-4 md:px-8">
             <div className="overflow-hidden rounded-[2.25rem] border border-[var(--border)] bg-[linear-gradient(135deg,#fffaf6_0%,#f5ebe5_52%,#efe2db_100%)] shadow-[0_24px_68px_rgba(79,57,48,0.08)]">
               <div className="grid gap-6 p-6 md:p-8 lg:grid-cols-[0.98fr_1.02fr] lg:p-9">
                 <div className="flex flex-col justify-between">
                   <div>
                     <p className="section-kicker">Kontakt</p>
-                    <h2 className="section-title mt-4 max-w-[15ch]">
-                      Planen Sie ein Event und suchen mobiles Catering mit Specialty Coffee und
-                      Ceremonial Matcha?
+                    <h2 id="contact-title" className="section-title mt-4 max-w-[17ch]">
+                      Planen Sie ein Event im Saarland und suchen Coffee Catering, Matcha Catering oder eine mobile Kaffeebar?
                     </h2>
                     <div className="mt-5 max-w-[36rem] space-y-4 text-[var(--fg-soft)]">
                       <p className="section-copy max-w-md leading-relaxed text-[var(--fg-soft)]">
@@ -834,7 +930,7 @@ export default function Home() {
                         E-Mail
                       </p>
                       <p className="text-[0.98rem] leading-7 text-[var(--fg)] md:text-[1.02rem]">
-                        kontakt@creamy-catering.de
+                        Infocreamy@web.de
                       </p>
                     </a>
                   </div>

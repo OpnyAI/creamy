@@ -30,36 +30,55 @@ const dmSerifDisplay = localFont({
 export const metadata: Metadata = {
   title: {
     default:
-      "Creamy Catering – Mobiles Specialty Coffee & Ceremonial Matcha Catering Saarland",
+      "Coffee Catering Saarland, Matcha Catering & mobile Kaffeebar mieten | Creamy Catering",
     template: "%s | Creamy Catering",
   },
   description:
-    "Premium mobiles Specialty-Coffee-, Ceremonial-Matcha- und Bagel-Catering für Events im Saarland. Hochzeiten, Business-Events, Messen und private Feiern.",
+    "Creamy Catering bietet hochwertiges Coffee Catering, Matcha Catering und eine mobile Kaffeebar zum Mieten im Saarland. Für Hochzeiten, Business-Events, Firmenveranstaltungen, Messen und private Feiern in Saarlouis, Saarbrücken und Umgebung.",
+  keywords: [
+    "coffee catering saarland",
+    "matcha catering saarland",
+    "mobile kaffeebar mieten saarland",
+    "specialty coffee catering saarland",
+    "kaffeebar für events saarland",
+    "mobile kaffeebar saarbrücken",
+    "matcha bar mieten saarland",
+    "coffee catering hochzeit saarland",
+    "coffee catering business events saarland",
+  ],
   metadataBase: new URL("https://www.creamy-catering.de"),
+  alternates: {
+    canonical: "/",
+  },
   manifest: "/site.webmanifest",
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     type: "website",
     title:
-      "Creamy Catering – Mobiles Specialty Coffee & Ceremonial Matcha Catering Saarland",
+      "Coffee Catering Saarland, Matcha Catering & mobile Kaffeebar | Creamy Catering",
     description:
-      "Premium mobiles Specialty-Coffee-, Ceremonial-Matcha- und Bagel-Catering für Events im Saarland.",
-    url: "/",
+      "Mobile Kaffeebar mit Specialty Coffee und Ceremonial Matcha für Hochzeiten, Business-Events und Firmenveranstaltungen im Saarland.",
+    url: "https://www.creamy-catering.de/",
     siteName: "Creamy Catering",
+    locale: "de_DE",
     images: [
       {
         url: "/media/images/IMG_2324.JPG",
         width: 1200,
         height: 630,
-        alt: "Creamy Catering mobile Bar",
+        alt: "Mobile Kaffeebar von Creamy Catering im Saarland",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Creamy Catering – Mobiles Specialty Coffee & Ceremonial Matcha Catering Saarland",
+      "Coffee Catering Saarland & mobile Kaffeebar | Creamy Catering",
     description:
-      "Premium mobiles Specialty-Coffee-, Ceremonial-Matcha- und Bagel-Catering für Events im Saarland.",
+      "Coffee Catering, Matcha Catering und mobile Kaffeebar für Events im Saarland, Saarlouis und Saarbrücken.",
     images: ["/media/images/IMG_2324.JPG"],
   },
   icons: {

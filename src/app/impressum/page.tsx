@@ -4,9 +4,13 @@ import { siteContent } from "@/lib/media-map";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum von Creamy Catering.",
+  description: "Impressum von Creamy Catering in Saarwellingen.",
   alternates: {
     canonical: "/impressum",
+  },
+  robots: {
+    index: false,
+    follow: true,
   },
 };
 

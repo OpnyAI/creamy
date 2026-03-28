@@ -4,9 +4,13 @@ import { siteContent } from "@/lib/media-map";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
-  description: "Datenschutzerklärung von Creamy Catering.",
+  description: "Datenschutzerklärung von Creamy Catering in Saarwellingen.",
   alternates: {
     canonical: "/datenschutz",
+  },
+  robots: {
+    index: false,
+    follow: true,
   },
 };
 
