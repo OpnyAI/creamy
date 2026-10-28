@@ -63,6 +63,11 @@ export default function Impressum() {
           </section>
 
           <section>
+            <h2 className={sectionTitleClass}>Umsatzsteuer-ID</h2>
+            <p className={copyClass}>USt-IdNr.: DE439926518</p>
+          </section>
+
+          <section>
             <h2 className={sectionTitleClass}>Verantwortlich für den Inhalt</h2>
             <div className={copyClass}>
               <p>Yasemin Tekin</p>
